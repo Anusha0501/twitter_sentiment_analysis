@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sentiment Analyzer</title>
+  <link rel="stylesheet" href="{{url_for('static', filename='style/result.css')}}">
+</head>
+<body>
+  <div class="container">
+    <h1>Sentiment Analyzer</h1>
+    <form id="sentimentForm" action="/predict" method="post">
+      <textarea id="textInput" name="text" placeholder="Enter your text here"></textarea>
+      <button type="submit">Check</button>
+    </form>
+    <div id="result"></div>
+    <div id="character">
+      <img id="characterImg" src="" alt="Character">
+    </div>
+  </div>
+  <script src="{{url_for('static', filename='js/script.js')}}"></script>
+</body>
+</html>

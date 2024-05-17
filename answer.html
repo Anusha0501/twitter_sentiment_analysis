@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+        .result-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .sentiment-info {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        .positive {
+            color: #4CAF50;
+        }
+        .negative {
+            color: #F44336;
+        }
+        .neutral {
+            color: #2196F3;
+        }
+    </style>
+</head>
+<body>
+    <div class="result-container">
+        <h2>Sentiment Analysis Result</h2>
+        <div class="sentiment-info">
+            The sentiment of the text is:
+            {% if prediction == 'Positive' %}
+                <span class="positive">Positive</span>
+            {% elif prediction == 'Negative' %}
+                <span class="negative">Negative</span>
+            {% else %}
+                <span class="neutral">Neutral</span>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>
